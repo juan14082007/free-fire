@@ -1,0 +1,109 @@
+def intro():
+    print("Bem-vindo ao Torneio de Sobrevivência da Garena Island!")
+    print("Você faz parte da equipe Fúria do Vento. Sua missão é sobreviver e vencer o torneio.")
+    print("Vamos começar a aventura!")
+
+def escolha_inicio():
+    print("\nVocê está na ilha. A equipe está pronta para começar a exploração.")
+    print("Escolha uma ação:")
+    print("1. Explorar a cidade em busca de recursos.")
+    print("2. Patrulhar a área oeste.")
+
+    escolha = input("Digite o número da sua escolha: ")
+
+    if escolha == "1":
+        explorar_cidade()
+    elif escolha == "2":
+        patrulhar_oeste()
+    else:
+        print("Escolha inválida. Tente novamente.")
+        escolha_inicio()
+
+def explorar_cidade():
+    print("\nVocê e Zara encontram um arsenal escondido na cidade.")
+    print("Escolha uma ação:")
+    print("1. Procurar por suprimentos médicos no hospital.")
+    print("2. Voltar e se encontrar com a equipe.")
+
+    escolha = input("Digite o número da sua escolha: ")
+
+    if escolha == "1":
+        suprimentos_medicos()
+    elif escolha == "2":
+        encontro_com_equipe()
+    else:
+        print("Escolha inválida. Tente novamente.")
+        explorar_cidade()
+
+def patrulhar_oeste():
+    print("\nLuna e Ryu enfrentam uma equipe rival e conseguem eliminar todos.")
+    print("Escolha uma ação:")
+    print("1. Seguir em frente para procurar por mais inimigos.")
+    print("2. Voltar e se encontrar com a equipe.")
+
+    escolha = input("Digite o número da sua escolha: ")
+
+    if escolha == "1":
+        procurar_inimigos()
+    elif escolha == "2":
+        encontro_com_equipe()
+    else:
+        print("Escolha inválida. Tente novamente.")
+        patrulhar_oeste()
+
+def suprimentos_medicos():
+    print("\nVocê encontra os suprimentos médicos e distribui para a equipe.")
+    print("A área segura está diminuindo. É hora de se preparar para o confronto final.")
+    print("Escolha uma ação:")
+    print("1. Montar uma estratégia de ataque final.")
+    print("2. Esperar e observar.")
+
+    escolha = input("Digite o número da sua escolha: ")
+
+    if escolha == "1":
+        confronto_final()
+    elif escolha == "2":
+        esperar_observar()
+    else:
+        print("Escolha inválida. Tente novamente.")
+        suprimentos_medicos()
+
+def procurar_inimigos():
+    print("\nVocê encontra outra equipe e participa de um combate intenso.")
+    print("A equipe Fúria do Vento vence a batalha.")
+    print("Escolha uma ação:")
+    print("1. Preparar-se para o confronto final.")
+    print("2. Explorar a área para encontrar recursos adicionais.")
+
+    escolha = input("Digite o número da sua escolha: ")
+
+    if escolha == "1":
+        confronto_final()
+    elif escolha == "2":
+        explorar_area()
+    else:
+        print("Escolha inválida. Tente novamente.")
+        procurar_inimigos()
+
+def confronto_final():
+    print("\nA equipe Fúria do Vento está pronta para o confronto final.")
+    print("A batalha é intensa, mas com estratégia e trabalho em equipe, você vence o torneio!")
+    print("Parabéns! Você é o campeão!")
+
+def esperar_observar():
+    print("\nA equipe Fúria do Vento é pega de surpresa e perde a batalha.")
+    print("Você não conseguiu vencer o torneio desta vez.")
+
+def explorar_area():
+    print("\nVocê encontra um recurso valioso que dá à sua equipe uma vantagem crucial.")
+    print("Você está agora pronto para o confronto final.")
+    confronto_final()
+
+def encontro_com_equipe():
+    print("\nVocê se encontra com a equipe e compartilha as informações.")
+    print("A equipe Fúria do Vento se prepara para o confronto final.")
+    confronto_final()
+
+# Início da história
+intro()
+escolha_inicio()
